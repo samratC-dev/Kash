@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #f5f0e8;
+  color: #0d0d0d;
+  font-family: 'Libre Franklin', sans-serif;
+  min-height: 100vh;
+}
+
+::selection { background: #b8f000; color: #0d0d0d; }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #ede8df; }
+::-webkit-scrollbar-thumb { background: #c4bdb0; border-radius: 4px; }
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type='number'] { -moz-appearance: textfield; }
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a9080' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.ruled {
+  background-image: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 39px,
+    #d9d2c5 39px,
+    #d9d2c5 40px
+  );
+}
+
+.stamp {
+  display: inline-block;
+  border: 2px solid currentColor;
+  padding: 1px 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.hash-bg {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    rgba(13,13,13,0.04) 4px,
+    rgba(13,13,13,0.04) 5px
+  );
+}
+
+.cat-food          { background: #fff3cc; color: #8a6600; }
+.cat-rent          { background: #e8e0ff; color: #4400cc; }
+.cat-salary        { background: #ddffc0; color: #2d7a00; }
+.cat-transport     { background: #cce5ff; color: #003fa3; }
+.cat-health        { background: #ffe0e0; color: #cc0022; }
+.cat-entertainment { background: #ffe8cc; color: #995500; }
+.cat-shopping      { background: #ffd6ee; color: #990055; }
+.cat-utilities     { background: #ccfff6; color: #007a5e; }
+.cat-freelance     { background: #ddffc0; color: #2d7a00; }
+.cat-investment    { background: #cce5ff; color: #003fa3; }
+.cat-gift          { background: #fff3cc; color: #8a6600; }
+.cat-other         { background: #ece8e0; color: #5a5040; }
+
+@keyframes toastSlide {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.toast-in { animation: toastSlide 0.28s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+
+@keyframes rowSlide {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.row-in { animation: rowSlide 0.2s ease forwards; }
+
+@keyframes numTick {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.num-tick { animation: numTick 0.18s ease forwards; }
